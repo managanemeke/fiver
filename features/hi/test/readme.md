@@ -1,0 +1,8 @@
+```bash
+deno run --allow-all test.js
+```
+
+```bash
+deno install
+```
+

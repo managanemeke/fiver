@@ -2,13 +2,7 @@
 npx serve
 ```
 
-# test
+# continue with
 
-```bash
-deno run --allow-all test.js
-```
-
-```bash
-deno install
-```
+1. [test](test/readme.md)
 
