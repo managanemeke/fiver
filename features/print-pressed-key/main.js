@@ -1,4 +1,4 @@
 import { printKey } from "./feature.js";
 
-document.addEventListener("keypress", printKey);
+document.addEventListener("keydown", printKey);
 
