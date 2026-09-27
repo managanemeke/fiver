@@ -1,5 +1,5 @@
 ```bash
-npx serve
+deno run -RN jsr:@std/http/file-server
 ```
 
 # continue with
