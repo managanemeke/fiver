@@ -1,5 +1,5 @@
 ```bash
-deno run --allow-all test.js
+deno run -A test.js
 ```
 
 ```bash
