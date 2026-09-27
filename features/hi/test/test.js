@@ -4,7 +4,7 @@ import {
 
 import {
   hi,
-} from "./feature.js";
+} from "../feature.js";
 
 test("hi", tester => {
   tester.equal(hi(), "hi", "return hi");
