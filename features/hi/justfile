@@ -1,17 +1,7 @@
 set shell := ["bash", "-c"]
 
-default: list
+default: serve
 
-hi name="":
-  @echo "hi, {{name}}"
-
-sysinfo:
-  @uname -a
-  @echo "user: $(whoami)"
-
-install-just:
-  pkg install just -y
-
-list:
-  @just --list
+serve:
+  deno run -RN jsr:@std/http/file-server
 
