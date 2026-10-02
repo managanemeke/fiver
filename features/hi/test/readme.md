@@ -1,5 +1,5 @@
 ```bash
-deno run -A test.js
+just test
 ```
 
 ```bash

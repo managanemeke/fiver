@@ -1,0 +1,7 @@
+set shell := ["bash", "-c"]
+
+default: test
+
+test:
+  deno run -A test.js
+
