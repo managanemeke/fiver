@@ -5,3 +5,6 @@ default: serve
 serve:
   deno run -RN jsr:@std/http/file-server
 
+test:
+  @just -d test -f test/justfile test
+
