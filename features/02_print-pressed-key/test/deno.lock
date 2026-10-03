@@ -1,0 +1,17 @@
+{
+  "version": "5",
+  "specifiers": {
+    "npm:tape-six@^1.16.4": "1.16.4"
+  },
+  "npm": {
+    "tape-six@1.16.4": {
+      "integrity": "sha512-ufmsZON7Yh9vPw7qEvmTQTTnfEbXa/TD7A3R0gywN3ujWC1kW1mLraUYVPQhMKD4GvBJANdAUKdSJS16Cq545w==",
+      "bin": true
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:tape-six@^1.16.4"
+    ]
+  }
+}
