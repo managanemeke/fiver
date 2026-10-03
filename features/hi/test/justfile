@@ -2,7 +2,7 @@ set shell := ["bash", "-c"]
 
 default: test
 
-test:
+test: install
   deno run -A test.js
 
 install:
