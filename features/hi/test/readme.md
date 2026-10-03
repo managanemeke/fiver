@@ -3,6 +3,6 @@ just test
 ```
 
 ```bash
-deno install
+just install
 ```
 
