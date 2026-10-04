@@ -18,3 +18,7 @@ test("keySymbol", tester => {
   tester.equal(keySymbol("KeyK"), "↑", "return up");
 });
 
+test("keySymbol", tester => {
+  tester.equal(keySymbol("KeyL"), "→", "return right");
+});
+
