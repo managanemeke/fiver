@@ -26,3 +26,7 @@ test("keySymbol", tester => {
   tester.equal(keySymbol("Space"), "○", "return stand");
 });
 
+test("keySymbol", tester => {
+  tester.equal(keySymbol("KeyQ"), "", "return nothing");
+});
+
