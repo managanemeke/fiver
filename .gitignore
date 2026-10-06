@@ -3,6 +3,7 @@
 !.editorconfig
 !.gitignore
 !index.html
+!justfile
 !readme.md
 
 !/features
