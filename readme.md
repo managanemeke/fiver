@@ -2,3 +2,7 @@
 just serve
 ```
 
+```bash
+just test
+```
+
