@@ -1,5 +1,7 @@
 # fiver
 
+---
+
 ```bash
 just serve
 ```
