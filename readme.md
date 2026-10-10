@@ -1,5 +1,7 @@
 # fiver
 
+Five keys text typer.
+
 ---
 
 ```bash
