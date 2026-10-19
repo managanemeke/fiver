@@ -1,7 +1,6 @@
-export const printKey = (event) => {
-  event.preventDefault();
+export const printKey = (eventCode) => {
   const target = document.querySelector("main");
-  target.textContent += keySymbol(event.code);
+  target.textContent += keySymbol(eventCode);
 }
 
 export const keySymbol = (key) => {

@@ -1,6 +1,9 @@
 import { printKey } from "./feature.js";
 
-document.addEventListener("keydown", printKey);
+document.addEventListener("keydown", event => {
+  event.preventDefault();
+  printKey(event.code);
+});
 
 let x = 0, y = 0;
 document.addEventListener('touchstart', e => {
