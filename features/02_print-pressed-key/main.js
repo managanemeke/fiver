@@ -18,17 +18,17 @@ document.addEventListener('touchend', e => {
 
   switch (true) {
     case Math.max(absX, absY) < 30:
-      console.log("tap");
+      printKey("Space")
       break;
     case absX > absY:
-      console.log(
-        dx > 0 ? 'swipe right' : 'swipe left'
-      );
+      dx > 0
+        ? printKey("KeyL")
+        : printKey("KeyH")
       break;
     default:
-      console.log(
-        dy > 0 ? 'swipe down' : 'swipe up'
-      );
+      dy > 0
+        ? printKey("KeyJ")
+        : printKey("KeyK")
   }
 });
 
