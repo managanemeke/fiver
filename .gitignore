@@ -2,9 +2,11 @@
 
 !.editorconfig
 !.gitignore
+
 !index.html
 !justfile
 !readme.md
+!todo.txt
 
 !/features
 
