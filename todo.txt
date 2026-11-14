@@ -1,4 +1,4 @@
-2026-11-09 refactor: migrate to nushell
-2026-11-09 feat: add section installation to readme.md
-2026-11-09 feat: initialize feature 03_copy-to-clipboard
-2026-11-09 feat: add importing all features to index.html
+(A) 2026-11-09 refactor: migrate to nushell
+(D) 2026-11-09 feat: add section installation to readme.md
+(D) 2026-11-09 feat: initialize feature 03_copy-to-clipboard
+(D) 2026-11-09 feat: add importing all features to index.html
