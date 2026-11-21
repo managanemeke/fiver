@@ -6,5 +6,5 @@ test: install
   deno run -A test.js
 
 install:
-  deno install
+  deno install --frozen
 
