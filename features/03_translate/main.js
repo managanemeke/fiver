@@ -3,10 +3,10 @@ import {
   translateMain,
 } from "./feature.js";
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", async (event) => {
   event.preventDefault();
   printKey(event.code);
-  translateMain();
+  await translateMain();
 });
 
 let x = 0, y = 0;

@@ -1,13 +1,16 @@
-export const translateMain = () => {
+export const translateMain = async () => {
   const main = document.querySelector("main");
   const mainText = main.textContent;
   const footer = document.querySelector("footer");
-  footer.textContent = translate(mainText);
+  footer.textContent = await translate(mainText);
 }
 
-export const translate = (text) => {
+export const translate = async (text) => {
   text = reduceReturns(text);
-  [text] = text.split("○");
+  if (text.includes("○")) {
+    [text] = text.split("○");
+    text += "○";
+  }
   const translated = [];
   while (text.length > 0) {
     const [first, second, third] = text.split("");
@@ -17,7 +20,10 @@ export const translate = (text) => {
     );
     text = text.slice(length);
     console.log(character);
-    make(action);
+    await make(action);
+    if (action === "finish") {
+      return "";
+    }
     translated.push(character);
   }
   return translated.join("");
@@ -25,12 +31,41 @@ export const translate = (text) => {
 
 export const reduceReturns = (text) => {
   return text.replace(/.↓↓↓/g, '');
+};
+
+const clear = () => {
+  const main = document.querySelector("main");
+  main.textContent = "";
+  const footer = document.querySelector("footer");
+  footer.textContent = "";
 }
 
-export const make = (action) => {
+const copyToClipboard = async () => {
+  const footer = document.querySelector("footer");
+  const text = footer.textContent;
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    let area = document.createElement('textarea');
+    area = Object.assign(ta, {
+      value: text,
+      style: 'position:fixed;opacity:0',
+    });
+    document.body.appendChild(area);
+    area.select();
+    const text = document.execCommand('copy');
+    area.remove();
+    return text;
+  }
+};
+
+export const make = async (action) => {
   switch (action) {
     case "finish":
       console.log("finish");
+      await copyToClipboard();
+      clear();
       return;
     case "return":
       console.log("return");
