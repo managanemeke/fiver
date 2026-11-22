@@ -49,3 +49,15 @@ test("translates forward branch", t => {
   t.equal(translate("↑→→"), "t", "return t");
 });
 
+test("translates right branch", t => {
+  t.equal(translate("→←←"), "u", "return u");
+  t.equal(translate("→←↑"), "l", "return l");
+  t.equal(translate("→←→"), "r", "return r");
+
+  t.equal(translate("→↑←"), "j", "return j");
+  t.equal(translate("→↑↑"), "y", "return y");
+  t.equal(translate("→↑→"), "h", "return h");
+
+  t.equal(translate("→→"), "i", "return i");
+});
+
