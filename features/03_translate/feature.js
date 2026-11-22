@@ -7,6 +7,7 @@ export const translateMain = () => {
 
 export const translate = (text) => {
   text = reduceReturns(text);
+  [text] = text.split("○");
   const translated = [];
   while (text.length > 0) {
     const [first, second, third] = text.split("");

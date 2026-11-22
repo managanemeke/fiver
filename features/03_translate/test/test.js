@@ -6,19 +6,10 @@ import {
   translate,
 } from "../feature.js";
 
-test("translate for actions", t => {
-  t.equal(translate("○"), "", "return silince");
-  t.equal(translate("○○"), "", "return silince");
-  t.equal(translate("○○○"), "", "return silince");
-});
-
 test("translate for symbols", t => {
-  t.equal(translate("←"), "", "return silince");
-  t.equal(translate("←←"), "", "return silince");
+  t.equal(translate("←"), "", "return silence");
+  t.equal(translate("←←"), "", "return silence");
   t.equal(translate("←←←"), "a", "return symbol");
-  t.equal(translate("○←←←"), "a", "return symbol");
-  t.equal(translate("←←←○"), "a", "return symbol");
-  t.equal(translate("○←←←○"), "a", "return symbol");
 });
 
 test("translates left branch", t => {
@@ -66,5 +57,11 @@ test("translate do return action", t => {
   t.equal(translate("←←←←←↑↓"), "am", "return am");
   t.equal(translate("←←←←←↑↓↓"), "am", "return am");
   t.equal(translate("←←←←←↑↓↓↓"), "a", "return a");
+});
+
+test("translate do finish action", t => {
+  t.equal(translate("○←←←"), "", "return silence");
+  t.equal(translate("←←←○"), "a", "return a");
+  t.equal(translate("←←←○←←←"), "a", "return a");
 });
 
