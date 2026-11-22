@@ -10,9 +10,6 @@ export const translate = (text) => {
   while (text.length > 0) {
     const [first, second, third] = text.split("");
     console.log(first, second, third);
-    if (!first || !second || !third) {
-      return "";
-    }
     const [length, action, character] = triad(
       first, second, third,
     );
