@@ -6,6 +6,7 @@ export const translateMain = () => {
 }
 
 export const translate = (text) => {
+  text = reduceReturns(text);
   const translated = [];
   while (text.length > 0) {
     const [first, second, third] = text.split("");
@@ -20,6 +21,10 @@ export const translate = (text) => {
   }
   return translated.join("");
 };
+
+export const reduceReturns = (text) => {
+  return text.replace(/.↓↓↓/g, '');
+}
 
 export const make = (action) => {
   switch (action) {

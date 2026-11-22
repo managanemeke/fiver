@@ -61,3 +61,10 @@ test("translates right branch", t => {
   t.equal(translate("→→"), "i", "return i");
 });
 
+test("translate do return action", t => {
+  t.equal(translate("←←←←←↓"), "a", "return a");
+  t.equal(translate("←←←←←↑↓"), "am", "return am");
+  t.equal(translate("←←←←←↑↓↓"), "am", "return am");
+  t.equal(translate("←←←←←↑↓↓↓"), "a", "return a");
+});
+
