@@ -51,9 +51,9 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "n"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
@@ -66,9 +66,9 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "k"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
@@ -81,16 +81,16 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "f"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
         case "↓":
-          return [2, "return", "↓"];
+          return [2, "return", ""];
         case "○":
-          return [2, "finish", "○"];
+          return [2, "finish", ""];
         default:
           return [2, "", ""];
       }
@@ -105,9 +105,9 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "p"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
@@ -120,9 +120,9 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "s"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
@@ -135,16 +135,16 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "t"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
         case "↓":
-          return [2, "return", "↓"];
+          return [2, "return", ""];
         case "○":
-          return [2, "finish", "○"];
+          return [2, "finish", ""];
         default:
           return [2, "", ""];
       }
@@ -159,9 +159,9 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "r"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
@@ -174,25 +174,25 @@ export const triad = (first, second, third) => {
             case "→":
               return [3, "", "h"];
             case "↓":
-              return [3, "return", "↓"];
+              return [3, "return", ""];
             case "○":
-              return [3, "finish", "○"];
+              return [3, "finish", ""];
             default:
               return [3, "", ""];
           }
         case "→":
           return [2, "", "i"];
         case "↓":
-          return [2, "return", "↓"];
+          return [2, "return", ""];
         case "○":
-          return [2, "finish", "○"];
+          return [2, "finish", ""];
         default:
           return [2, "", ""];
       }
     case "↓":
-      return [1, "return", "↓"];
+      return [1, "return", ""];
     case "○":
-      return [1, "finish", "○"];
+      return [1, "finish", ""];
     default:
       return [1, "", ""];
   }
