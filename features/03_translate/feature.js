@@ -6,7 +6,11 @@ export const translateMain = async () => {
 }
 
 export const translate = async (text) => {
-  text = reduceReturns(text);
+  if (text.includes("↓↓↓")) {
+    text = reduceReturns(text);
+    changeMainText(text);
+    await make("return");
+  }
   if (text.includes("○")) {
     [text] = text.split("○");
     text += "○";
@@ -38,6 +42,11 @@ const clear = () => {
   main.textContent = "";
   const footer = document.querySelector("footer");
   footer.textContent = "";
+}
+
+const changeMainText = (text) => {
+  const main = document.querySelector("main");
+  main.textContent = text;
 }
 
 const copyToClipboard = async () => {
